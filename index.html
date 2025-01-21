@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoFucker</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #videoWrapper { position: relative; }
+        canvas { position: absolute; top: 0; left: 0; }
+        #controls { margin-top: 10px; }
+        #corruptionValue { font-weight: bold; }
+        .button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>VideoFucker</h1>
+    <p>Upload a video and corrupt it in various ways!</p>
+
+    <input type="file" id="videoInput">
+
+    <div id="videoWrapper">
+        <video id="mainVideo" controls></video>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div id="controls">
+        <label for="corruptionLevel">Corruption Level: </label>
+        <input type="range" id="corruptionLevel" min="1" max="20" value="10">
+        <span id="corruptionValue">10</span>
+        <br><br>
+        <label for="glitchRGB">Enable RGB Glitch:</label>
+        <input type="checkbox" id="glitchRGB">
+        <br><br>
+        <label for="invertColors">Enable Inversion of Colors:</label>
+        <input type="checkbox" id="invertColors">
+        <br><br>
+        <button id="apocalypseBtn" class="button">🔥 Start the Apocalypse 🔥</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
